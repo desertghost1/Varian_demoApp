@@ -2,7 +2,7 @@
 Documentation              Noona Demo APP Tests
 Library                    SeleniumLibrary
 Resource                   keywords.robot
-#Suite Teardown            Close All Browsers
+Suite Teardown            Close All Browsers
 
 *** Test Cases ***
 
@@ -19,6 +19,8 @@ Invalid login credentials should return the right error message
     Enter an invalid login password
     CLick on Login button and assert error message
     #close browser
+
+
 
 
 # robot -d TestReports noona_tests.robot
