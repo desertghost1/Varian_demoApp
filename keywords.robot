@@ -11,7 +11,7 @@ Navigate to Login page
 
 Maximize window
     maximize browser window
-    set selenium implicit wait                                            10s
+    set selenium implicit wait                10s
 
 Assert that page is correctly loaded
     wait until element is enabled             ${LANGUAGE_SELECTOR}
@@ -25,10 +25,13 @@ Assert that page is correctly loaded
     wait until element is enabled             ${DONT_HAVE_AN_ACCT}
     wait until element is enabled             ${PRIVACY_STATEMENT}
     wait until element is enabled             ${ABOUT}
-    page should contain                                                   Language
-    page should contain                                                   Welcome to Noona
-    page should contain                                                   Please enter your email address and password.
-    page should contain                                                   2022 Varian Medical Systems, Inc.
+
+    page should contain                       Language
+    page should contain                       Welcome to Noona
+    page should contain                       Please enter your email address and password.
+    page should contain                       2022 Varian Medical Systems, Inc.
+
+    capture page screenshot                   pageScreenshot.png
 
     ${page_title}=                            get title
     log to console                            ${page_title}
