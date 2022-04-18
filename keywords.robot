@@ -30,6 +30,12 @@ Assert that page is correctly loaded
     page should contain                                                   Please enter your email address and password.
     page should contain                                                   2022 Varian Medical Systems, Inc.
 
+    ${page_title}=                            get title
+    log to console                            ${page_title}
+
+    ${page_url}=                              get location
+    log to console                            ${page_url}
+
 
 
 # keywords for invalid login credential test below
@@ -53,12 +59,10 @@ CLick on Login button
     click element                           ${LOGINBUTTON}
 
 
-Assert the displayed error message for an invalid login atempt
+Assert displayed error message is correct
     sleep                                                                   4s
     wait until element is enabled           ${ERROR_MESSAGE}                10s
     page should contain                     Incorrect username or password. If you have forgotten your password, please click Problems logging in -link.
-
-
 
 
 

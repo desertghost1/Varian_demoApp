@@ -2,7 +2,7 @@
 Documentation              Noona Demo APP Tests
 Library                    SeleniumLibrary
 Resource                   keywords.robot
-Suite Teardown            Close All Browsers
+Suite Teardown             Close All Browsers
 
 *** Test Cases ***
 
@@ -18,9 +18,8 @@ Invalid login credentials should return the right error message
     Enter an invalid login email address
     Enter an invalid login password
     CLick on Login button
-    Assert the displayed error message for an invalid login atempt
+    Assert displayed error message is correct
     #close browser
-
 
 
 
