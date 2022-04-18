@@ -48,13 +48,16 @@ Enter an invalid login password
     input text                              ${PASSWORD_FIELD}               Testing
 
 
-
-CLick on Login button and assert error message
+CLick on Login button
     wait until element is enabled           ${LOGINBUTTON}                  10s
     click element                           ${LOGINBUTTON}
 
+
+Assert the displayed error message for an invalid login atempt
+    sleep                                                                   4s
     wait until element is enabled           ${ERROR_MESSAGE}                10s
     page should contain                     Incorrect username or password. If you have forgotten your password, please click Problems logging in -link.
+
 
 
 

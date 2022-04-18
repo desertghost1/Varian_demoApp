@@ -17,7 +17,8 @@ Invalid login credentials should return the right error message
     [Tags]  LOGIN_FAILED
     Enter an invalid login email address
     Enter an invalid login password
-    CLick on Login button and assert error message
+    CLick on Login button
+    Assert the displayed error message for an invalid login atempt
     #close browser
 
 
