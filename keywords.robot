@@ -39,6 +39,8 @@ Assert that page is correctly loaded
     ${page_url}=                              get location
     log to console                            ${page_url}
 
+    sleep                                     3s
+
 
 
 # keywords for invalid login credential test below
@@ -57,7 +59,7 @@ Enter an invalid login password
     input text                              ${PASSWORD_FIELD}               Testing
 
 
-CLick on Login button
+Click on Login button
     wait until element is enabled           ${LOGINBUTTON}                  10s
     click element                           ${LOGINBUTTON}
 
